@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int guessNumber(int n) 
+{
+    int pick;
+    cin>>pick;
+    for (int i=1 ; i<=n ; i++)
+    {
+        if (pick == i)
+        {
+        	cout<<pick;
+            return 0;
+        }
+        else if(n > pick) 
+        {
+        	cout<<pick;
+            return -1;
+        }
+        else if (n < pick)
+        {
+        	cout<<pick;
+            return 1;
+        }
+        else 
+        { 
+        	cout<<pick;
+            return 0; 	
+        }
+    }
+ return 0;
+}
+
+int main()
+{
+	int num;
+	cin>>num;
+	cout<<guessNumber(num);
+	
+}
